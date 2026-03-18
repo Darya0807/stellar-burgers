@@ -41,7 +41,7 @@ export const fetchWithRefresh = async <T>(
 ) => {
   try {
     const res = await fetch(url, options);
-    return await checkResponse<T>(res);
+    return checkResponse<T>(res);
   } catch (err) {
     if ((err as { message: string }).message === 'jwt expired') {
       const refreshData = await refreshToken();
@@ -50,7 +50,7 @@ export const fetchWithRefresh = async <T>(
           refreshData.accessToken;
       }
       const res = await fetch(url, options);
-      return await checkResponse<T>(res);
+      return checkResponse<T>(res);
     } else {
       return Promise.reject(err);
     }
@@ -67,9 +67,7 @@ type TFeedsResponse = TServerResponse<{
   totalToday: number;
 }>;
 
-type TOrdersResponse = TServerResponse<{
-  data: TOrder[];
-}>;
+type TOrdersResponse = TFeedsResponse;
 
 export const getIngredientsApi = () =>
   fetch(`${URL}/ingredients`)
@@ -88,7 +86,7 @@ export const getFeedsApi = () =>
     });
 
 export const getOrdersApi = () =>
-  fetchWithRefresh<TFeedsResponse>(`${URL}/orders`, {
+  fetchWithRefresh<TOrdersResponse>(`${URL}/orders`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
