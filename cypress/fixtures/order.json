@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "name": "Био-марсианский spicy краторный бургер",
+  "order": {
+    "ingredients": [
+      "643d69a5c3f7b9001cfa093c",
+      "643d69a5c3f7b9001cfa0941",
+      "643d69a5c3f7b9001cfa0942",
+      "643d69a5c3f7b9001cfa093c"
+    ],
+    "_id": "69bd25dfa64177001b330336",
+    "owner": {
+      "name": "",
+      "email": "d.kissa25@mail.ru",
+      "createdAt": "2026-03-18T14:15:32.758Z",
+      "updatedAt": "2026-03-18T14:15:32.758Z"
+    },
+    "status": "done",
+    "name": "Био-марсианский spicy краторный бургер",
+    "createdAt": "2026-03-20T10:47:59.921Z",
+    "updatedAt": "2026-03-20T10:48:00.223Z",
+    "number": 103106,
+    "price": 3024
+  }
+}

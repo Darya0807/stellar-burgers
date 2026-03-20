@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "user": {
+    "email": "testuser@test.com",
+    "name": "Test User",
+    "createdAt": "2026-03-20T10:47:59.921Z",
+    "updatedAt": "2026-03-20T10:48:00.223Z"
+  }
+}

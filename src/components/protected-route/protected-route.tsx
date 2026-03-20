@@ -1,5 +1,5 @@
 import { Navigate, useLocation } from 'react-router-dom';
-import { useSelector } from '../../services/store';
+import { useSelector } from '../../services/store/store';
 import { Preloader } from '@ui';
 
 export const ProtectedRouteAuth = ({
