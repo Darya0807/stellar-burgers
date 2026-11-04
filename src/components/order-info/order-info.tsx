@@ -1,11 +1,11 @@
 import { FC, useMemo, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from '../../services/store';
+import { useDispatch, useSelector } from '../../services/store/store';
 import { Preloader } from '../ui/preloader';
 import { OrderInfoUI } from '../ui/order-info';
 import { TIngredient } from '@utils-types';
 import { getOrderByNumberApi } from '@api';
-import { fetchIngredients } from '../../services/slices/ingredientsSlice';
+import { fetchIngredients } from '../../services/slices/ingredients/ingredientsSlice';
 
 export const OrderInfo: FC = () => {
   const { number } = useParams<{ number: string }>();

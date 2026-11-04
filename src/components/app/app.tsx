@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import { useDispatch } from '../../services/store';
+import { useDispatch } from '../../services/store/store';
 import '../../index.css';
 import styles from './app.module.css';
 
@@ -20,7 +20,7 @@ import {
   ProtectedRouteAuth,
   ProtectedRouteUnAuth
 } from '../protected-route/protected-route';
-import { checkUserAuth } from '../../services/slices/userSlice';
+import { checkUserAuth } from '../../services/slices/User/userSlice';
 import { OrderModal } from '../order-modal/order-modal';
 import { IngredientModal } from '../ingredient-details-modal/ingredient-details-modal';
 

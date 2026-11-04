@@ -1,9 +1,9 @@
 import { FC, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSelector, useDispatch } from '../../services/store';
+import { useSelector, useDispatch } from '../../services/store/store';
 import { Preloader } from '../ui/preloader';
 import { IngredientDetailsUI } from '../ui/ingredient-details';
-import { fetchIngredients } from '../../services/slices/ingredientsSlice';
+import { fetchIngredients } from '../../services/slices/ingredients/ingredientsSlice';
 
 export const IngredientDetails: FC = () => {
   const { id } = useParams<{ id: string }>();
